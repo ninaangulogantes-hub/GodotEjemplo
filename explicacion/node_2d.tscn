@@ -1,0 +1,25 @@
+[gd_scene format=3 uid="uid://beu4ggkns0lu8"]
+
+[ext_resource type="Script" uid="uid://d1g3uuggjab0u" path="res://static_body_2d.gd" id="1_wtcfe"]
+[ext_resource type="Texture2D" uid="uid://ci3pqo0b4cm22" path="res://icon.svg" id="2_0e48y"]
+
+[sub_resource type="RectangleShape2D" id="RectangleShape2D_lfkbx"]
+size = Vector2(40, 33)
+
+[node name="Node2D" type="Node2D" unique_id=930324374]
+
+[node name="Suelo" type="StaticBody2D" parent="." unique_id=949356866]
+script = ExtResource("1_wtcfe")
+
+[node name="CollisionShape2D" type="CollisionShape2D" parent="Suelo" unique_id=1098671854]
+position = Vector2(-30, 6.5)
+shape = SubResource("RectangleShape2D_lfkbx")
+
+[node name="Sprite2D" type="Sprite2D" parent="Suelo" unique_id=326672738]
+position = Vector2(-30, 8.999999)
+scale = Vector2(0.44031894, 0.35066104)
+texture = ExtResource("2_0e48y")
+region_enabled = true
+region_rect = Rect2(14, 13, 97, 104)
+
+[node name="OldMan" type="CharacterBody2D" parent="Suelo" unique_id=549164312]

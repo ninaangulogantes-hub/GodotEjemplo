@@ -1,0 +1,43 @@
+[gd_scene format=3 uid="uid://bjtkygqc15fvm"]
+
+[ext_resource type="Script" uid="uid://dq2wc5ssnuit7" path="res://señorito.gd" id="1_xj0kw"]
+[ext_resource type="Texture2D" uid="uid://ci3pqo0b4cm22" path="res://icon.svg" id="2_1wlwy"]
+
+[sub_resource type="RectangleShape2D" id="RectangleShape2D_aui74"]
+size = Vector2(121, 114)
+
+[sub_resource type="RectangleShape2D" id="RectangleShape2D_lfkbx"]
+size = Vector2(400, 100)
+
+[node name="Nodo" type="Node2D" unique_id=1053734177]
+position = Vector2(-430, -697)
+metadata/_edit_horizontal_guides_ = [-482.0]
+
+[node name="Señorito" type="CharacterBody2D" parent="." unique_id=1787946176]
+position = Vector2(-4, 9)
+rotation = 0.017453292
+script = ExtResource("1_xj0kw")
+
+[node name="CollisionShape2D" type="CollisionShape2D" parent="Señorito" unique_id=1763355168]
+position = Vector2(-253, -212)
+shape = SubResource("RectangleShape2D_aui74")
+debug_color = Color(0.6695131, 0.42752776, 0.72822237, 0.41960785)
+
+[node name="Sprite2D" type="Sprite2D" parent="Señorito" unique_id=102418819]
+position = Vector2(-255, -207)
+texture = ExtResource("2_1wlwy")
+
+[node name="Camera2D" type="Camera2D" parent="Señorito" unique_id=1363875016]
+position = Vector2(-112.30443, -131.05998)
+
+[node name="Suelo" type="StaticBody2D" parent="." unique_id=972967222]
+position = Vector2(-7, 32)
+
+[node name="CollisionShape2D" type="CollisionShape2D" parent="Suelo" unique_id=1732365099]
+position = Vector2(-117, -107)
+shape = SubResource("RectangleShape2D_lfkbx")
+
+[node name="Sprite2D" type="Sprite2D" parent="Suelo" unique_id=567959179]
+position = Vector2(-114.000015, -106.000015)
+scale = Vector2(3.1171873, 0.78906244)
+texture = ExtResource("2_1wlwy")
