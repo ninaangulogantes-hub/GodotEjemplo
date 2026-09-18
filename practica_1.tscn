@@ -1,0 +1,14 @@
+[gd_scene format=3 uid="uid://xkqitrev6eud"]
+
+[sub_resource type="PhysicsMaterial" id="PhysicsMaterial_3kgul"]
+
+[sub_resource type="RectangleShape2D" id="RectangleShape2D_hkiod"]
+size = Vector2(68, 20)
+
+[node name="Practica1" type="Node2D" unique_id=1760299281]
+
+[node name="Suelo" type="StaticBody2D" parent="." unique_id=1151821025]
+physics_material_override = SubResource("PhysicsMaterial_3kgul")
+
+[node name="CollisionShape2D" type="CollisionShape2D" parent="Suelo" unique_id=1904081805]
+shape = SubResource("RectangleShape2D_hkiod")
